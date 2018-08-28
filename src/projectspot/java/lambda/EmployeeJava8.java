@@ -32,10 +32,11 @@ public class EmployeeJava8 {
 		Collections.sort(empList, (o1, o2) -> o1.getlName().compareTo(o2.getlName()));
 
 		/**
-		 * Print all Employees
+		 * Print all Employees checkout lambda expression is passed in as second
+		 * argument because we want to print all employees, condition is always true
 		 */
 		System.out.println("*Printing all Employees");
-		printall(empList);
+		printConditional(empList, p -> true);
 
 		/**
 		 * Print all Employees first name starts with P checkout lambda expression
@@ -60,19 +61,6 @@ public class EmployeeJava8 {
 			}
 		}
 
-	}
-
-	/**
-	 * A function to print all existing employees as it is
-	 * 
-	 * @param empList
-	 */
-
-	private static void printall(List<Employee> empList) {
-		// TODO Auto-generated method stub
-		for (Employee e : empList) {
-			System.out.println(e);
-		}
 	}
 
 }
